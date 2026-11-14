@@ -4,7 +4,9 @@ Trabalho prático individual da disciplina **DGT2812 - Desenvolvimento de Aplica
 
 **Autor:** Jeferson Augusto Gomes · **Data:** 14/11/2026
 
-Protótipo de agência de viagens baseado no roteiro [Posso criar um App de outra forma!](https://sway.cloud.microsoft/4hFJo0qpdyvzSSFk).
+Protótipo de agência de viagens baseado no roteiro [Trabalho Prático | DGT2812
+Desenvolvimento de Aplicativos Móveis
+com Flutter](https://sway.cloud.microsoft/4hFJo0qpdyvzSSFk).
 
 ## Funcionalidades
 
@@ -20,7 +22,7 @@ Protótipo de agência de viagens baseado no roteiro [Posso criar um App de outr
 - Cópia do resumo do destino para a área de transferência.
 - ListView para rolagem e largura máxima para telas amplas.
 
-**Não há backend, pagamento, reserva real, envio de e-mail ou persistência após fechar/recarregar.** Não use dados pessoais reais nos formulários. Preços e avaliações são exemplos acadêmicos. As imagens são ilustrativas.
+**Não há backend, pagamento, reserva real, envio de e-mail ou persistência após fechar/recarregar.** Ao usar não use dados pessoais reais nos formulários. Informado preços e avaliações são exemplos acadêmicos. As imagens são ilustrativas.
 
 ## Executar no Chrome
 
@@ -36,7 +38,7 @@ Os arquivos de plataforma web estão incluídos. O Flutter compilará o aplicati
 
 ## Executar no Android
 
-A estrutura nativa Android está incluída. Instale Android Studio e Android SDK, inicie um emulador ou conecte um aparelho com depuração USB:
+A estrutura nativa Android está incluída. Instale Android Studio e Android SDK, deve iniciar um emulador ou conectar com aparelho com depuração USB:
 
 ```sh
 flutter pub get
