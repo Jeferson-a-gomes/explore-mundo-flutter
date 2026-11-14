@@ -86,9 +86,9 @@ String normalized(String value) {
 }
 
 List<Destination> searchDestinations(String query) {
-  final terms = normalized(query)
-      .split(RegExp(r'\s+'))
-      .where((v) => v.isNotEmpty);
+  final terms = normalized(
+    query,
+  ).split(RegExp(r'\s+')).where((v) => v.isNotEmpty);
   return destinations.where((d) {
     final text = normalized('${d.name} ${d.location} ${d.description}');
     return terms.every(text.contains);

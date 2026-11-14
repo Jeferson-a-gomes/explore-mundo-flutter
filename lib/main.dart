@@ -195,7 +195,8 @@ class _ExploreHomeState extends State<ExploreHome> {
                       if (results.isEmpty)
                         const InfoPanel(
                           title: 'Nenhum destino encontrado',
-                          text: 'Tente buscar por lago, montanhas, praia, Brasil ou Suíça.',
+                          text:
+                              'Tente buscar por lago, montanhas, praia, Brasil ou Suíça.',
                         ),
                       ...results.map(
                         (d) => DestinationCard(
