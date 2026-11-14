@@ -134,6 +134,7 @@ class _ExploreHomeState extends State<ExploreHome> {
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 1000),
                 child: ListView(
+                  key: const Key('main-scroll'),
                   controller: scroll,
                   padding: const EdgeInsets.all(20),
                   children: switch (section) {
@@ -698,6 +699,7 @@ class _DestinationPageState extends State<DestinationPage> {
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 900),
           child: ListView(
+            key: const Key('detail-scroll'),
             children: [
               Image.asset(
                 d.image,

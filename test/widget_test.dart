@@ -41,7 +41,16 @@ void main() {
     await tester.tap(find.byType(FeaturedBanner));
     await tester.pumpAndSettle();
     final button = find.widgetWithText(ElevatedButton, 'Simular reserva');
-    await tester.scrollUntilVisible(button, 300);
+    await tester.scrollUntilVisible(
+      button,
+      300,
+      scrollable: find
+          .descendant(
+            of: find.byKey(const Key('detail-scroll')),
+            matching: find.byType(Scrollable),
+          )
+          .first,
+    );
     await tester.pumpAndSettle();
     await tester.tap(button);
     await tester.pumpAndSettle();
@@ -73,6 +82,12 @@ void main() {
     await tester.scrollUntilVisible(
       find.text('Suas solicitações nesta sessão'),
       500,
+      scrollable: find
+          .descendant(
+            of: find.byKey(const Key('main-scroll')),
+            matching: find.byType(Scrollable),
+          )
+          .first,
     );
     await tester.pumpAndSettle();
     expect(find.textContaining('1 viajante(s)'), findsOneWidget);
@@ -86,8 +101,11 @@ void main() {
     await tester.pumpWidget(const ExploreMundoApp());
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
+    await tester.ensureVisible(find.byType(FeaturedBanner));
+    await tester.pumpAndSettle();
     await tester.tap(find.byType(FeaturedBanner));
     await tester.pumpAndSettle();
+    expect(find.text('Conheça seu destino'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 }
