@@ -28,7 +28,6 @@ p('Jeferson Augusto Gomes<br/>Estácio · 14 de novembro de 2026')
 im=PILImage.open(root/'images/lake.jpg'); w,hh=im.size
 story.append(Image(str(root/'images/lake.jpg'),width=475,height=220,kind='proportional'))
 story.append(Spacer(1,20))
-p('Posso criar um App de outra forma!','SubX')
 p('Documentação técnica e funcional de um protótipo de agência de viagens. '
   'O aplicativo reúne descoberta de destinos, pacotes, contato e interações em Flutter.')
 p('Natureza da entrega: código-fonte, assets, testes e documentação. '
