@@ -94,6 +94,13 @@ docs/VALIDACAO.md           Matriz e roteiro de validação
 
 Os widgets Material utilizam o pacote oficial `material_ui`, conforme a migração do Flutter atual. O roteiro menciona RaisedButton; este projeto utiliza **ElevatedButton**, seu substituto atual no Flutter.
 
+## Gerar novamente a documentação
+
+```sh
+python -m pip install -r tool/requirements-docs.txt
+python tool/generate_documentation.py
+```
+
 ## Entregar
 
 1. Confira o código e execute as verificações acima no Flutter.
@@ -116,3 +123,5 @@ As imagens ilustram categorias de paisagem; não comprovam os locais dos pacotes
 - Layout oficial Flutter: https://docs.flutter.dev/ui/layout/tutorial
 - Widgets básicos: https://docs.flutter.dev/ui/widgets/basics
 - Instalação: https://docs.flutter.dev/install
+
+- Widgets Material atuais: https://pub.dev/packages/material_ui

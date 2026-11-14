@@ -67,7 +67,7 @@ table([['Requisito','Aplicação no código'],
  ['ListView','Rolagem das seções e suporte a telas menores.'],
  ['Stack','Banner com fotografia, degradê e texto sobrepostos.'],
  ['Widget personalizado / interação','Favoritos, pesquisa, comentários e simulações.']], [165,310])
-p('ElevatedButton é utilizado no lugar do antigo RaisedButton citado no material. '
+p('Os componentes Material utilizam o pacote oficial material_ui. ElevatedButton é utilizado no lugar do antigo RaisedButton citado no material. '
   'A navegação superior é rolável horizontalmente em telas estreitas. O conteúdo tem largura máxima em telas amplas.','SmallX')
 page();h('3. Execução e uso')
 p('Ambiente','SubX')

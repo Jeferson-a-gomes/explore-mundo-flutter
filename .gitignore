@@ -13,3 +13,7 @@ android/local.properties
 android/key.properties
 *.jks
 *.keystore
+
+android/.gradle/
+android/captures/
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
