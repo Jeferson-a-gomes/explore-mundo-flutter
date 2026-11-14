@@ -1,10 +1,14 @@
 // Verificação offline executável sem pacotes, rede ou inicialização do Flutter.
+import 'dart:io';
+
+// Importação relativa intencional: este verificador roda sem resolução de pacotes.
+// ignore: avoid_relative_lib_imports
 import '../lib/destination.dart';
 
 void main() {
   void check(bool condition, String name) {
     if (!condition) throw StateError(name);
-    print('PASS: $name');
+    stdout.writeln('PASS: $name');
   }
 
   check(

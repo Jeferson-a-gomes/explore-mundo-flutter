@@ -24,7 +24,7 @@ Protótipo de agência de viagens baseado no roteiro [Posso criar um App de outr
 
 ## Executar no Chrome
 
-Instale o Flutter SDK estável com Dart >= 3.10, Git e Chrome. Depois:
+Instale o Flutter SDK 3.50 ou superior, com Dart >= 3.13, Git e Chrome. Depois:
 
 ```sh
 flutter doctor
@@ -92,7 +92,7 @@ docs/VALIDACAO.md           Matriz e roteiro de validação
 | Interatividade | Pesquisa, favoritos, comentários e simulações |
 | Documentação em PDF | `docs/documentacao.pdf` |
 
-O roteiro menciona RaisedButton; este projeto utiliza **ElevatedButton**, seu substituto atual no Flutter.
+Os widgets Material utilizam o pacote oficial `material_ui`, conforme a migração do Flutter atual. O roteiro menciona RaisedButton; este projeto utiliza **ElevatedButton**, seu substituto atual no Flutter.
 
 ## Entregar
 

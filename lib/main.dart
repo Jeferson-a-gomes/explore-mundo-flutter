@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 
 import 'destination.dart';
@@ -195,8 +195,7 @@ class _ExploreHomeState extends State<ExploreHome> {
                       if (results.isEmpty)
                         const InfoPanel(
                           title: 'Nenhum destino encontrado',
-                          text:
-                              'Tente buscar por lago, montanhas, praia, Brasil ou Suíça.',
+                          text: 'Tente buscar por lago, montanhas, praia, Brasil ou Suíça.',
                         ),
                       ...results.map(
                         (d) => DestinationCard(
@@ -608,8 +607,9 @@ class _DestinationPageState extends State<DestinationPage> {
             ),
             ElevatedButton(
               onPressed: () {
-                if (form.currentState!.validate())
+                if (form.currentState!.validate()) {
                   Navigator.pop(dialogContext, true);
+                }
               },
               child: const Text('Confirmar simulação'),
             ),
@@ -727,10 +727,11 @@ class _DestinationPageState extends State<DestinationPage> {
                             '${d.name} | ${d.location} | Explore Mundo - demonstração acadêmica',
                       ),
                     );
-                    if (context.mounted)
+                    if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Resumo copiado.')),
                       );
+                    }
                   }),
                 ],
               ),
