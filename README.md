@@ -61,11 +61,11 @@ Verificação independente e offline dos dados do catálogo:
 dart tool/check_domain.dart
 ```
 
-**Validação confirmada no GitHub Actions em 14/11/2026:** formatação aprovada, `flutter analyze` sem problemas, **7 testes aprovados** (3 de domínio e 4 de widgets) e `flutter build web --release` concluído. A verificação independente do domínio também passou em seus 9 casos.
+**Validação confirmada no GitHub Actions em 14/11/2026:** formatação aprovada, `flutter analyze` sem problemas, **7 testes aprovados** (3 de domínio e 4 de widgets) e builds **web release e APK Android debug** concluídos. A verificação independente do domínio também passou em seus 9 casos.
 
-A suíte exercita pesquisa, favoritos, validação e cancelamento de reserva, registro de solicitação e layout de 320 px. Consulte a aba **Actions** para o build Android e os artefatos. Não foi realizado teste em aparelho físico nem inspeção visual interativa da interface compilada.
+A suíte exercita pesquisa, favoritos, validação e cancelamento de reserva, registro de solicitação e layout de 320 px. Os artefatos `explore-mundo-android` e `explore-mundo-web` estão na aba **Actions**. Não foi realizado teste em aparelho físico nem inspeção visual interativa da interface compilada.
 
-Execução de referência: https://github.com/Jeferson-a-gomes/explore-mundo-flutter/actions/runs/43627828546
+Execução de referência: https://github.com/Jeferson-a-gomes/explore-mundo-flutter/actions/runs/43628180929
 
 ## Estrutura
 

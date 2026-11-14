@@ -92,10 +92,10 @@ p('<b>9 verificações offline passaram:</b> pesquisa sem acentos; pesquisa sem 
   'ausência de resultados; catálogo completo; moeda brasileira; valor zero; agrupamento de milhões; identificadores únicos. '
   'O formatador Dart foi aplicado aos cinco arquivos. Os três JPEGs foram decodificados e a documentação foi renderizada para inspeção.')
 p('Validação confirmada no GitHub Actions','SubX')
-p('<b>Formatação aprovada, flutter analyze sem problemas, 7 testes aprovados e build web release concluído.</b> '
+p('<b>Formatação aprovada, flutter analyze sem problemas, 7 testes aprovados e builds web release e Android debug concluídos.</b> '
   'A suíte verifica pesquisa, favoritos, validação e cancelamento de reserva, registro de solicitação e ausência de overflow em telas de 320 px. '
-  'Ambiente: Flutter 3.50.0. Referência: execução 43627828546, em 14/11/2026.')
-p('A estrutura Android está incluída e o workflow também gera APK de debug. O resultado mais recente e os artefatos estão na aba Actions. '
+  'Ambiente: Flutter 3.50.0. Referência: execução 43628180929, em 14/11/2026.')
+p('A estrutura Android está incluída. O APK de debug e o site compilado foram publicados como artefatos da execução, na aba Actions. '
   'Não foi realizado teste em aparelho físico nem inspeção visual interativa do aplicativo compilado.','SmallX')
 p('Comandos de validação','SubX')
 p('dart tool/check_domain.dart<br/>flutter analyze<br/>flutter test<br/>flutter build web --release','CodeX')

@@ -17,7 +17,7 @@
 
 ## Executado no GitHub Actions
 
-Ambiente: Flutter 3.50.0. Execução de referência: https://github.com/Jeferson-a-gomes/explore-mundo-flutter/actions/runs/43627828546
+Ambiente: Flutter 3.50.0. Execução de referência: https://github.com/Jeferson-a-gomes/explore-mundo-flutter/actions/runs/43628180929
 
 - PASS: resolução das dependências.
 - PASS: formatação Dart.
@@ -25,7 +25,8 @@ Ambiente: Flutter 3.50.0. Execução de referência: https://github.com/Jeferson
 - PASS: 7 testes (3 de domínio e 4 de widgets).
 - PASS: `flutter build web --release`.
 - Arquivos nativos Android gerados pelo Flutter e incorporados ao repositório.
-- O workflow também gera APK de debug. Conferir o resultado e os artefatos da execução mais recente na aba Actions.
+- PASS: `flutter build apk --debug`.
+- Artefatos publicados: `explore-mundo-android` (APK de debug) e `explore-mundo-web` (site compilado).
 
 Nos testes de widgets foram exercitados pesquisa e limpeza, abertura do destino, favorito mantido na sessão, cancelamento e validação da reserva, registro na lista de solicitações e ausência de overflow em 320 px nas telas inicial e de detalhes. Não foi feito teste em aparelho físico, nem verificação visual manual da interface compilada.
 
