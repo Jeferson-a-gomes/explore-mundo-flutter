@@ -42,6 +42,12 @@ void main() {
     await tester.pumpAndSettle();
     final button = find.widgetWithText(ElevatedButton, 'Simular reserva');
     await tester.scrollUntilVisible(button, 300);
+    await tester.pumpAndSettle();
+    await tester.tap(button);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Cancelar'));
+    await tester.pumpAndSettle();
+    expect(find.text('Simulação registrada'), findsNothing);
     await tester.tap(button);
     await tester.pumpAndSettle();
     await tester.tap(find.text('Confirmar simulação'));
@@ -68,6 +74,7 @@ void main() {
       find.text('Suas solicitações nesta sessão'),
       500,
     );
+    await tester.pumpAndSettle();
     expect(find.textContaining('1 viajante(s)'), findsOneWidget);
   });
 

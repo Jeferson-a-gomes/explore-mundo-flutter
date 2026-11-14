@@ -101,9 +101,13 @@ class _ExploreHomeState extends State<ExploreHome> {
           children: [
             Icon(Icons.explore_outlined, color: teal),
             SizedBox(width: 8),
-            Text(
-              'Explore Mundo',
-              style: TextStyle(fontWeight: FontWeight.w800),
+            Flexible(
+              child: Text(
+                'Explore Mundo',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.w800),
+              ),
             ),
           ],
         ),
@@ -394,9 +398,11 @@ class FeaturedBanner extends StatelessWidget {
                     const SizedBox(height: 6),
                     const Row(
                       children: [
-                        Text(
-                          'Explore essa experiência',
-                          style: TextStyle(color: Colors.white),
+                        Expanded(
+                          child: Text(
+                            'Explore essa experiência',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                         SizedBox(width: 8),
                         Icon(
