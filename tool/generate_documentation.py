@@ -76,10 +76,9 @@ p('Execução web','SubX')
 p('flutter doctor<br/>flutter pub get<br/>flutter run -d chrome','CodeX')
 p('O diretório web/ já está incluído. As fotos são carregadas do projeto e não exigem acesso remoto durante o uso. A primeira resolução de dependências e o download dos artefatos do Flutter exigem conexão.')
 p('Preparação Android','SubX')
-p('Os arquivos nativos Android devem ser gerados uma vez no diretório do projeto:')
-p('flutter create --platforms=android<br/>&nbsp;&nbsp;--org br.com.jeferson --project-name explore_mundo .<br/>flutter pub get<br/>flutter devices<br/>flutter run -d ID_DO_DISPOSITIVO','CodeX')
-p('O primeiro comando deve ser digitado em uma única linha. Não use --overwrite para preservar os arquivos existentes. '
-  'Esta entrega inclui a plataforma web; a geração nativa e a compilação Android ainda precisam ser executadas.','SmallX')
+p('A estrutura nativa Android e o Gradle Wrapper estão incluídos. Inicie um emulador ou conecte um aparelho com depuração USB:')
+p('flutter pub get<br/>flutter devices<br/>flutter run -d ID_DO_DISPOSITIVO','CodeX')
+p('O arquivo android/local.properties contém caminhos específicos da máquina e não é versionado. O pubspec.lock registra as versões das dependências resolvidas.','SmallX')
 p('Roteiro de demonstração','SubX')
 for t in ['1. Pesquisar por SUICA, conferir o resultado e limpar a consulta.',
           '2. Abrir o banner, examinar título, estrelas, localização e descrição.',
@@ -92,14 +91,16 @@ p('Evidências obtidas em 14/11/2026','SubX')
 p('<b>9 verificações offline passaram:</b> pesquisa sem acentos; pesquisa sem distinção de caixa; combinação de termos; '
   'ausência de resultados; catálogo completo; moeda brasileira; valor zero; agrupamento de milhões; identificadores únicos. '
   'O formatador Dart foi aplicado aos cinco arquivos. Os três JPEGs foram decodificados e a documentação foi renderizada para inspeção.')
-p('Verificações ainda pendentes','SubX')
-p('<b>flutter analyze, flutter test e flutter build web não foram executados.</b> A inicialização do SDK foi bloqueada pela revisão automática '
-  'de execução ao tentar acessar metadados da infraestrutura. Não há evidência de execução da interface ou APK gerado. '
-  'Os testes de widgets foram escritos, mas seus resultados ainda precisam ser confirmados.')
+p('Validação confirmada no GitHub Actions','SubX')
+p('<b>Formatação aprovada, flutter analyze sem problemas, 7 testes aprovados e build web release concluído.</b> '
+  'A suíte verifica pesquisa, favoritos, validação e cancelamento de reserva, registro de solicitação e ausência de overflow em telas de 320 px. '
+  'Ambiente: Flutter 3.50.0. Referência: execução 43627828546, em 14/11/2026.')
+p('A estrutura Android está incluída e o workflow também gera APK de debug. O resultado mais recente e os artefatos estão na aba Actions. '
+  'Não foi realizado teste em aparelho físico nem inspeção visual interativa do aplicativo compilado.','SmallX')
 p('Comandos de validação','SubX')
 p('dart tool/check_domain.dart<br/>flutter analyze<br/>flutter test<br/>flutter build web --release','CodeX')
 p('O workflow .github/workflows/flutter.yml prepara Flutter, verifica formatação, analisa o projeto, executa testes e compila web no GitHub Actions. '
-  'O resultado só pode ser confirmado após a execução. O roteiro manual completo encontra-se em docs/VALIDACAO.md.')
+  'O roteiro manual complementar encontra-se em docs/VALIDACAO.md.')
 p('Procedimento de entrega','SubX')
 p('Revisar o projeto, executar os testes no Flutter e manter este PDF em docs/documentacao.pdf no Git. '
   'Enviar o link do repositório ao tutor pela Sala de Aula Virtual, aba Trabalhos, do nível correspondente. '

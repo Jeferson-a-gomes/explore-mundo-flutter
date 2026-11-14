@@ -36,16 +36,15 @@ Os arquivos de plataforma web estão incluídos. O Flutter compilará o aplicati
 
 ## Executar no Android
 
-Instale também Android Studio, Android SDK e um emulador ou conecte um aparelho com depuração USB. Gere os arquivos nativos no próprio diretório do projeto:
+A estrutura nativa Android está incluída. Instale Android Studio e Android SDK, inicie um emulador ou conecte um aparelho com depuração USB:
 
 ```sh
-flutter create --platforms=android --org br.com.jeferson --project-name explore_mundo .
 flutter pub get
 flutter devices
 flutter run -d ID_DO_DISPOSITIVO
 ```
 
-O comando `flutter create` sem `--overwrite` preserva o código existente. Os arquivos nativos Android ainda não foram gerados neste ambiente; a distribuição incluída está preparada para web. No Windows, execute os mesmos comandos no terminal do VS Code ou PowerShell.
+O Gradle Wrapper e `pubspec.lock` estão versionados. O arquivo `android/local.properties` é específico de cada máquina e não deve ser enviado ao Git.
 
 ## Verificações
 
@@ -62,7 +61,11 @@ Verificação independente e offline dos dados do catálogo:
 dart tool/check_domain.dart
 ```
 
-**Resultado realmente verificado neste ambiente:** 9 verificações do domínio passaram; os 5 arquivos Dart passaram pelo formatador. Os 3 JPEGs e o PDF foram conferidos. **A análise Flutter, os testes de widgets e a compilação não foram executados**, pois a inicialização do Flutter foi bloqueada por uma tentativa de acesso a metadados da infraestrutura. Não há APK nem screenshots de execução anexados. A automação em `.github/workflows/flutter.yml` executa os checks completos após o push; o resultado deve ser conferido na aba Actions antes da entrega.
+**Validação confirmada no GitHub Actions em 14/11/2026:** formatação aprovada, `flutter analyze` sem problemas, **7 testes aprovados** (3 de domínio e 4 de widgets) e `flutter build web --release` concluído. A verificação independente do domínio também passou em seus 9 casos.
+
+A suíte exercita pesquisa, favoritos, validação e cancelamento de reserva, registro de solicitação e layout de 320 px. Consulte a aba **Actions** para o build Android e os artefatos. Não foi realizado teste em aparelho físico nem inspeção visual interativa da interface compilada.
+
+Execução de referência: https://github.com/Jeferson-a-gomes/explore-mundo-flutter/actions/runs/43627828546
 
 ## Estrutura
 
@@ -73,6 +76,7 @@ test/                      Testes de domínio e widgets
 tool/check_domain.dart     Verificação offline do domínio
 images/                    Imagens locais usadas pelo aplicativo
 web/                       Arquivos de entrada da plataforma web
+android/                   Projeto nativo Android e Gradle Wrapper
 docs/documentacao.pdf      Documentação para entrega
 docs/VALIDACAO.md           Matriz e roteiro de validação
 .github/workflows/         Análise, testes e build no GitHub Actions

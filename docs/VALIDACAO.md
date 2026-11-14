@@ -15,9 +15,19 @@
 - Existência e decodificação dos 3 assets JPEG verificadas.
 - PDF renderizado e revisado visualmente.
 
-## Pendente de execução Flutter
+## Executado no GitHub Actions
 
-Não foi possível executar `flutter analyze`, `flutter test`, `flutter build web` nem abrir o aplicativo neste ambiente. A inicialização do SDK foi bloqueada pela revisão automática devido a uma tentativa de acesso a metadados da infraestrutura. Essa restrição não comprova um defeito no código, mas impede afirmar que a interface foi validada em execução. O workflow do GitHub fará as verificações completas quando o projeto for publicado.
+Ambiente: Flutter 3.50.0. Execução de referência: https://github.com/Jeferson-a-gomes/explore-mundo-flutter/actions/runs/43627828546
+
+- PASS: resolução das dependências.
+- PASS: formatação Dart.
+- PASS: `flutter analyze`.
+- PASS: 7 testes (3 de domínio e 4 de widgets).
+- PASS: `flutter build web --release`.
+- Arquivos nativos Android gerados pelo Flutter e incorporados ao repositório.
+- O workflow também gera APK de debug. Conferir o resultado e os artefatos da execução mais recente na aba Actions.
+
+Nos testes de widgets foram exercitados pesquisa e limpeza, abertura do destino, favorito mantido na sessão, cancelamento e validação da reserva, registro na lista de solicitações e ausência de overflow em 320 px nas telas inicial e de detalhes. Não foi feito teste em aparelho físico, nem verificação visual manual da interface compilada.
 
 ## Roteiro manual para navegador e Android
 
